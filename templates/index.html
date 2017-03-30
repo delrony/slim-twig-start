@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <h1>Slim</h1>
+        <div>a microframework for PHP</div>
+
+        {% if name is defined %}
+            <h2>Hello {{ name|e }}!</h2>
+        {% else %}
+            <p>Try <a href="http://www.slimframework.com">SlimFramework</a>
+        {% endif %}
+    </body>
+</html>
+{% endblock %}
