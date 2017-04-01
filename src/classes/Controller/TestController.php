@@ -2,10 +2,6 @@
 
 namespace Rony\Controller;
 
-use \Rony\Model\TicketMapper;
-use Rony\Model\ComponentMapper;
-use Rony\Model\TicketEntity;
-
 class TestController {
 	protected $c;
 	protected $renderer;

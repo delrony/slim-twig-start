@@ -4,6 +4,17 @@ Use this skeleton application to quickly setup and start working on a new Slim F
 
 This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
 
+curl -s https://getcomposer.org/installer | php
+./composer.phar install
+
+touch logs/app.log
+
+Make app.log writable by apache. e.g.
+
+chgrp www-data logs/app.log
+chmod g+w logs/app.log
+
+Configure apache:
 ```
 Alias /app "/var/www/slim-twig-start/public/"
 <Directory "/var/www/slim-twig-start/public/">
@@ -14,3 +25,6 @@ Alias /app "/var/www/slim-twig-start/public/"
     AllowOverride All
 </Directory>
 ```
+
+In public/.htaccess file change the RewriteBase to your app's URL path (e.g. /app).
+In templates/base.html change the href attribute of base tag to your app's URL path (e.g. /app/).
